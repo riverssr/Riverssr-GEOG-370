@@ -8,19 +8,47 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:red">Sam Rivers</h2>
+    <p>To create the various projections displayed below, I began by adding a vector layer of the world.  This was the Natural Earth Data shapefile.  After adding that layer, I then used the indicatrix mapper with its default settings to add the graticules and caps representing area.  Finally, to change in between projections, I went to CRS in project properties located at the bottom right of the QGIS window.  Here you can select a variety of projections to choose from.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The WGS84 projection preserves area and shape quite well between the middle latitudes and the equator.  Near the poles, however, the shapes and areas are distorted.  Latitude and longitude lines are straight on this projection.  </h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>On the Aitoff projection, latitude and longitude lines are curved.  Areas experience some magnification near the poles, but shape is mostly preserved overall.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
+    <h2>Pseudo Mercator</h2>
+    <h3>The Pseudo Mercator preserves shape, but areas are magnified considerably near the poles.  Latitude and longitude lines are straight.</h3>
+    <a href="./maps/3857_SR_PseudoMercator.png">
+    <img src="./maps/3857_SR_PseudoMercator.png" alt="Pseudo Mercator" width='500px'>
+    <h2>Winkel Projection</h2>
+    <h3>The Winkel projection resembles the Aitoff projection, but features less curvature of the longitude lines and no curvature of the latitude lines.  Shape is well preserved.  Area is also well preserved, though there is some magnification near the poles.</h3>
+    <a href=".//maps/53018_SR_Winkel.png">
+    <img src=".//maps/53018_SR_Winkel.png" alt="WGS84" width='500px'>
+    <h2>Cylindrical Equal Area</Area> Projection</h2>
+    <h3>The Cylindrical Equal Area projection preserves area throughout, but there is significant North-South compression near the poles. Latitude and longitude lines are straight.</h3>
+    <a href=".//maps/54034_SR_CylindricalEqualArea.png">
+    <img src=".//maps/54034_SR_CylindricalEqualArea.png" alt="WGS84" width='500px'>
+    <h2>World Equidistant Conic Projection</h2>
+    <h3>The World Equidistant Conic projection preserves North-South distance.  It is centered around the North Pole.  Area is magnified as you move South.  This results in considerable East-West elongation towards the South Pole.</h3>
+    <a href=".//maps/54027_WorldEquidistantConic.png">
+    <img src=".//maps/54027_WorldEquidistantConic.png" alt="WGS84" width='500px'>
+    <h2>North Pole Azimuthal Equidistant Projection</h2>
+    <h3>The North Pole Azimuthal Equidistant Projection is very similar to the World Equidistant Conic projection.  Both feature straight longitude lines and curved latitude lines.  Both preserve North-South distance, but result in area expansion towards the South Pole.  The area expansion towards the South Pole results in siginificant East-West elongation.</h3>
+    <a href=".//maps/102016_NorthPoleAsimuthalEquidistant.png">
+    <img src=".//maps/102016_NorthPoleAsimuthalEquidistant.png" alt="WGS84" width='500px'>
+    <h2>Eckert 1 Projection</h2>
+    <h3>The Eckert 1 projection preserves shape well.  There is a little area expansion towards the poles.  Its most unique characteristic, however, is that its longitude lines, while straight, meet at an angle at the equator so as to bulge out away fromt the prime meridian.</h3>
+    <a href=".//maps/Eckert1_54015.png">
+    <img src=".//maps/Eckert1_54015.png" alt="WGS84" width='500px'>
+    <h2>Gall Stereographic Projection</h2>
+    <h3>The Gall Stereographic projection resembles the Pseudo Mercator in that shape is well preserved overall, but there is area magnification near the poles.  The magnification near the poles is mostly East-West, making Greenland look considerably wider.  The latitude and longitude lines are straight.</h3>
+    <a href=".//maps/Gall_Stereographic.png">
+    <img src=".//maps/Gall_Stereographic.png" alt="WGS84" width='500px'>
     <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
     <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
     <p></p>
