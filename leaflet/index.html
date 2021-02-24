@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Map</title>
+    <title></title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -14,6 +14,9 @@
    crossorigin=""></script>
 
    <script src = "./data/old_well_4326.geojson"></script>
+   <script src = "./data/wilson_lib.geojson"></script>
+   <script src = "./data/wilsonlib_4326.geojson"></script>
+   <script src = "./data/belltower.geojson"></script>
 
 </head>
 <body>
@@ -25,13 +28,19 @@
 
     <script>
         var map = L.map('mapid').setView([35.91, -79.05], 17);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map)
-        L.marker([35.911271, -79.049807]).addTo(map)
-            .bindPopup("CH 322")
-            .openPopup();
-        
+      L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(map)
+     //   L.marker([35.911042070754114, -79.04785015638221]).addTo(map)
+       //     .bindPopup("Davis Library")
+       //     .openPopup();
+        //L.marker([35.90936496187618, -79.04971697369619])
+          //  .bindPopup(customPopup)
+          //  .openPopup()
+          //  .addTo(map);
+       // L.marker([35.908583679165496, -79.04922295281864]).addTo(map)
+          //  .bindPopup("Bell Tower")
+          //  .openPopup();
         // L.geoJSON(uncwell).addTo(map)
-
+        
         var uncIcon = L.icon({ // notice the L.icon which is a Leaflet object with properties
         iconUrl: 'https://faopharmacy.unc.edu/files/2018/04/Old-Well-Icon-Example.png',
         // this points to a jpg image obtained from the internet
@@ -39,14 +48,47 @@
         popupAnchor: [0,0] // where the icon is located relative to the lat lon of the point.
         });
 
-        var customPopup = "UNC Well<br/><img src='https://global.unc.edu/files/2020/02/spring_4_09__12_054-768x511.jpg'width='100px'/>";
+        var uncIcon1 = L.icon({
+        iconUrl: 'https://thumbs.dreamstime.com/b/vector-book-icon-sign-design-used-web-vector-book-icon-sign-design-137567805.jpg',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+        });
 
-        L.geoJSON(uncwell, { // a
+        var uncIcon2 = L.icon({
+        iconUrl: 'https://i.pinimg.com/originals/02/3e/59/023e59bab208454bdd0015382b8a0479.jpg',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+        });
+
+        var uncIcon3 = L.icon({
+        iconUrl: 'https://img.favpng.com/8/10/22/nc-state-memorial-bell-tower-drawing-png-favpng-3Q8KBDASb5S6TgD2fVy94H2kY.jpg',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+        });
+
+        var customPopup = "Wilson Library<br/><img src='https://upload.wikimedia.org/wikipedia/commons/a/ae/Wilson_Library_and_Quad_in_UNC_Chapel_Hill.JPG'width='100px'/>";
+
+        var customPopup1 = "Davis Library<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Davis_Library_UNC_Front_1.JPG/4032px-Davis_Library_UNC_Front_1.JPG'width='100px'/>";
+
+        var customPopup2 = "Bell Tower <br/><img src='https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/bell-tower-at-unc-chapel-hill-bryan-pollard.jpg'width='100px'/>";
+
+        L.geoJSON(Davis, { // a
         pointToLayer: function (feature, latlng) { // b
-        return L.marker(latlng, {icon: uncIcon});}}) // c
-        .bindPopup(customPopup) // d
+        return L.marker(latlng, {icon: uncIcon2});}}) // c
+        .bindPopup(customPopup1) // d
         .addTo(map); //
 
+        L.geoJSON(wilsonlib, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: uncIcon1});}}) // c
+        .bindPopup(customPopup) // d
+        .addTo(map);
+
+        L.geoJSON(belltower, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: uncIcon3});}}) // c
+        .bindPopup(customPopup2) // d
+        .addTo(map);
     </script>
 
     

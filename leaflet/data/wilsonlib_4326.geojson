@@ -1,7 +1,7 @@
-{
+var Davis = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "id": 1, "descrip": "wilsonlib" }, "geometry": { "type": "Point", "coordinates": [ -79.04971697369619, 35.90936496187618] } }
+{ "type": "Feature", "properties": { "id": 1, "descrip": "Davis" }, "geometry": { "type": "Point", "coordinates": [ -79.04805573249143, 35.910910770075866] } }
 ]
 }

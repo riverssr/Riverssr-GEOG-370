@@ -1,0 +1,7 @@
+var belltower = {
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "descrip": "Belltower" }, "geometry": { "type": "Point", "coordinates": [ -79.04924280748034, 35.908617039517026] } }
+]
+}
