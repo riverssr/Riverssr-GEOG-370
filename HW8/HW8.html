@@ -10,17 +10,25 @@
     
     <h2 style="color:red">Sam Rivers</h2>
 
+<h3>I compared the median incomes of families of 4 with families with no dependents in NC Counties to serve as a proxy for understanding family demographics.  Regarding families with no dependents, there are two primary assumptions that I am willing to make.  The first being the majority of those families are older and their children have left the house, meaning their career progression has largely reached its peak. The other demographic I would expect is young couples who have yet to have kids, which would skew the incomes lower.  With these assumptions in mind, I am anticipating counties with older populations to have a greater ratio of family of four income to families with no dependents.</h3>
    
-    <a href="./SAM_HW7_Chloropleth.png">
-    <img src="./SAM_HW7_Chloropleth.png" alt="EPSG 2264" width='500px'>
+    <a href="./Families of 4 vs No Dependents Equal Interval.png">
+    <img src="./Families of 4 vs No Dependents Equal Interval.png" alt="EPSG 2264" width='500px'>
     </a>
     
-<h3>Unfortunately, not all 100 NC counties had data for the median incomes of families of 4.  Notice the great disparity between the lowest at roughly 40k per year and the highest at roughly 127k per year.  This data was from 2018.</h3>
+<h3>Above is the map with ratios broken into equal intervals.  Overall this classification mode did a good job of providing a notable number of groups within each class.  In addition, it is also helpful knowing that each interval is equal so the uncertainty associated with being in a certain class remains the same overall.</h3>
 
-    <a href="https://riverssr.github.io/Riverssr-GEOG-370/SAM_HW4/ACSST1Y2018.S1903_2021-03-04T143345/ACSST1Y2018.S1903_data_with_overlays_2021-03-04T143342.csv"> csv </a>
+<a href="./Families of 4 vs no Dependents Pretty.png">
+    <img src="./Families of 4 vs no Dependents Pretty.png" alt="EPSG 2264" width='500px'>
+    </a>
 
+<h3>Above is a map classified through "pretty breaks". As the name states, the breaks are "pretty" as they are along 0.2 intervals making them easy to visualize.  There is a shift in county classification from the equal interval map in that there are less counties within the highest interval.</h3>
+   
+    <a href="./NC families of 4 vs no dependendents nat.png">
+        <img src="./NC families of 4 vs no dependendents nat.png" alt="EPSG 2264" width='500px'>
+        </a>
 
+<h3>Above is a map with natural breaks.  I believe it results in the greatest distribution between classes, as it is meant to break the data into naturally occurring groups.  The only downside is the intervals do not represent important graduations of ratios.</h3>
 
-    <a href="https://riverssr.github.io/Riverssr-GEOG-370/SAM_HW4/4326NC.geojson"> Vector File</a>
 </body>
 </html>
