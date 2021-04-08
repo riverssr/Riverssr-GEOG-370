@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrorism Deaths By Country</title>
+    <title>Spatial Relationship Between Nevada Mine Reclamation Sites and Wilderness Areas</title>
 </head>
 <body>
-    <h1>Terrorism Deaths By Country</h1>
+    <h1>Spatial Relationship Between Nevada Mine Reclamation Sites and Wilderness Areas</h1>
     
     <h2 style="color:red">Sam Rivers</h2>
 
@@ -15,19 +15,21 @@
     <img src="./Rivers_HW10.png" alt="EPSG 26911" width='500px'>
     </a>
     
-<h3>The above map displays a choropleth of the world's countries with graduations based off of deaths due to terrorism in 2017.  Understandibly, this is a very morbid topic, but it's important to not only understand which countries are afflicted the most as well as dispel mischaracterizations of certain areas. CSV source: https://ourworldindata.org/hiv-aids</h3>
+<h3>When I embarked on this project, I sought to see what proportion of mine reclamation sites were either within or near wilderness areas in Nevada.  I initially plotted the mine reclamation sites and the wilderness areas to see if there was any intersection.  There was none so I increased to a 15km buffer as I had estimated this would produce some meaningful intersections.  15km is still close enough for pollution from tailings seepage into groundwater and runoff into nearby streams to present problems.  Reassuringly, the majority of reclamation sites are not within 15km of wilderness areas.  To conduct the assessment, I used the buffer feature to create the 15km radii and the intersect feature to see where the wilderness areas and reclamation site buffers intersected.</h3>
 
-    <a href="https://data-ndep-gis.opendata.arcgis.com/search?tags=BMRR"> Reclamation Site Source
+    <a href="https://data-ndep-gis.opendata.arcgis.com/search?tags=BMRR"> Reclamation Site Source;
     </a>
 
 
     
 
-    <a href="https://www.blm.gov/services/geospatial/GISData/nevada"> Wilderness Area Source 
+    <a href="https://www.blm.gov/services/geospatial/GISData/nevada"> Wilderness Area Source; 
 </a>
 
 
     
-    <a href="https://ourworldindata.org/hiv-aids"> Buffer GeoJSON</a>
+    <a href="https://riverssr.github.io/Riverssr-GEOG-370/HW10/Reclamation_15km_Buffers.geojson"> Buffer GeoJSON;</a>
+
+    <a href="https://riverssr.github.io/Riverssr-GEOG-370/HW10/intersections hw10.geojson"> Intersections GeoJSON</a>
 </body>
 </html>
